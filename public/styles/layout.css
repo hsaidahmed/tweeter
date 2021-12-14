@@ -20,6 +20,16 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
+main {
+  width: 90%;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  border: solid 2px red;
+  margin:auto;
+
+
+}
 
 
 /*
