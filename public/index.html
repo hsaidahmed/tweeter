@@ -37,6 +37,8 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -63,14 +65,38 @@
       <section class="new-tweet">
         <!-- <h2>Compose Tweet</h2> -->
         <form id="tweetForm" action="/tweets" method="POST">
+         
           <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="buttons">
             <button id="button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
+          
         </form>
       </section>
+      <section id="tweetsContainer">
+      <article class="tweetContainer">
+        <header class="header2">
+          <div class="topLeft">
+            <i class="fas fa-user-circle"></i>Newton
+          </div>
+          @siri
+
+        </header>
+        <main class="bigBody">
+        <span class="theTweet">If I have seen further it is by standing on the shoulders of giants</span>
+        <hr>
+      </main>
+        <footer class="bottom"> 10 days ago
+          <div class="icons">
+          <i id="flag"class="fa-solid fa-flag"></i>             
+          <i id="retweet"class="fa-solid fa-retweet"></i>
+          <i id="like"class="fa-solid fa-heart"></i>   
+        </div>         
+        </footer>
+      </article>
+    </section>
     </main>
   </body>
 </html>
