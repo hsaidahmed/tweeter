@@ -23,17 +23,35 @@ $(document).ready(function () {
       "created_at": 1461113959088
     }
   ]
+  $("#tweetForm").on("submit", function(event) {
+    event.preventDefault();
+    $.ajax("/tweets", {
+      method: "POST",
+      data: $(this).serialize()
+    })
+    console.log(event);
+  })
+
+  
+  
+  //  * Client-side JS logic goes here
+  //  * jQuery is already loaded
+  //  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+   
 
   const renderTweets = function(tweets) {
   
     for (let item of tweets) {
       const tweetElement = createTweetElement(item);
      $("#tweets-container").prepend(tweetElement);
-     }
+     
+    }
   }
 
   const createTweetElement = function(tweet) {
-    const $tweeter = `
+    
+    
+      const $tweeter = `
       <article class="tweet-container">
         <header class="header2">
           <div class="topLeft"> <img src="${tweet.user.avatars}"> ${tweet.user.name}</div>
