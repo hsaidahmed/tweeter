@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,8 +36,16 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
 
   <body>
@@ -47,7 +54,7 @@
       <span class="title">tweeter</span>
       <div class="element">
         Write a new tweet
-        <i class="fas fa-angle-double-down"></i>
+        <i id="arrow" class="fas fa-angle-double-down"></i>
       </div>
     </nav>
     <header class="header">
@@ -56,7 +63,7 @@
       </div>
       <br />
       <div>
-        <h2>Your Name</h2>
+        <h2>JOHNNY D</h2>
       </div>
     </header>
 
@@ -64,39 +71,22 @@
     <main class="container">
       <section class="new-tweet">
         <!-- <h2>Compose Tweet</h2> -->
+        <div class="error"></div>
         <form id="tweetForm" action="/tweets" method="POST">
-         
           <label for="tweet-text"></label>
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea
+            name="text"
+            id="tweet-text"
+            placeholder="What are you humming about?"
+          ></textarea>
           <div class="buttons">
             <button id="button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
-          
         </form>
       </section>
-      <section id="tweetsContainer">
-      <article class="tweetContainer">
-        <header class="header2">
-          <div class="topLeft">
-            <i class="fas fa-user-circle"></i>Newton
-          </div>
-          @siri
-
-        </header>
-        <main class="bigBody">
-        <span class="theTweet">If I have seen further it is by standing on the shoulders of giants</span>
-        <hr>
-      </main>
-        <footer class="bottom"> 10 days ago
-          <div class="icons">
-          <i id="flag"class="fa-solid fa-flag"></i>             
-          <i id="retweet"class="fa-solid fa-retweet"></i>
-          <i id="like"class="fa-solid fa-heart"></i>   
-        </div>         
-        </footer>
-      </article>
-    </section>
+      <section id="tweets-container">
+       </section>
     </main>
   </body>
 </html>

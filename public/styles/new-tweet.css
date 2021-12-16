@@ -21,13 +21,14 @@
   color: red;
 
 }
-.tweetContainer{
-  /* border:black solid 10px; 
-  height: 8rem; */
+.tweet-container{
+ 
+
   display: flex;
   align-items: stretch;
   flex-direction: column;
   justify-content: space-between;
+  border: double;
 }
 .bigBody{
   padding: 20px;
@@ -51,7 +52,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 20px;
-  /* padding: 20px; */
+  padding: 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -62,7 +63,7 @@ article:hover {
   box-shadow: black;
 }
 #flag:hover {
-  color: goldenrod;
+  color: rgb(245, 191, 56);
 }
 #like:hover {
   color: red;
@@ -74,7 +75,14 @@ article{
   border-style:ridge;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 
+
+
 }
-#tweetsContainer{
+#tweets-container{
   padding-top: 20px;
+}
+.error{
+  color: red;
+  text-decoration-thickness:initial;
+
 }
