@@ -14,13 +14,13 @@ $(document).ready(function () {
       $("#tweets-container").prepend(tweetElement);
     }
   };
-  
+
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  
+
   const createTweetElement = function (tweet) {
     const $tweeter = `
     <article class="tweet-container">
@@ -45,7 +45,6 @@ $(document).ready(function () {
     </div>
     </footer>
     </article> `;
-
     return $tweeter;
   };
 
@@ -53,17 +52,15 @@ $(document).ready(function () {
     event.preventDefault();
     const textBox = $("#tweet-text").val().trim().length;
     if (!textBox) {
-      $(".error").text("🚩Tweet box cannot be empty🚩");
-      $(".error").slideDown("slow")
-      $(".error").delay(3000).slideUp("slow");
-
+      $(".error").text("Tweet box cannot be empty");
+      $(".error").slideDown("slow");
+      $(".error").delay(4000).slideUp("slow");
       return;
     }
     if (textBox > 140) {
-      $(".error").text("Tweet cannot be more than 140 characters‼️");
-      $(".error").slideDown("slow")
+      $(".error").text("*Tweet cannot be more than 140 characters‼️");
+      $(".error").slideDown("slow");
       $(".error").delay(3000).slideUp("slow");
-
       return;
     }
     $.ajax("/tweets", {

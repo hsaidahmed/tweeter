@@ -5,10 +5,8 @@
   justify-content: center;
   align-items: center;
   background-image: url("https://www.transparenttextures.com/patterns/gravel.png");
-  background-color: #045068;
+  background-color: #198db1;
   flex-direction:column;
   color: rgb(211, 152, 4);
   z-index: 0;
 }
-
-
